@@ -13,7 +13,7 @@ import RevealMenu from './plugin.js'
 
 function get_theme_ext(href)
 {
-  if (href == "/theme/dark.css")
+  if (href == "/talk_opennumdef_july_2023/theme/dark.css")
   {
     return "dark";
   }
@@ -29,12 +29,14 @@ function update_img() {
   var el = document.querySelectorAll("#adapt");
   for (var i = 0; i < el.length; i++) {
     var data = el[i].getAttribute("src").split("/");
-    el[i].setAttribute("src", "/" + theme_name + "/" + data.slice(3).join("/"));
+    data[2] = theme_name
+    // console.log(data);
+    el[i].setAttribute("src", data.join("/"));
+    // console.log(el[i]);
   }
 }
 
 var observer = new MutationObserver(function(mutation){
-  console.log("coucou")
   update_img();
 });
 
@@ -56,10 +58,10 @@ deck.initialize({
   menu: {
     themes: true,
     themes: [
-      {name: 'dark', theme: '/theme/dark.css'},
-      {name: 'light', theme: '/theme/light.css'}
+      {name: 'dark', theme: '/talk_opennumdef_july_2023/theme/dark.css'},
+      {name: 'light', theme: '/talk_opennumdef_july_2023/theme/light.css'}
     ],
-    path: 'node_modules/reveal.js-menu/',
+    path: 'theme',
   },
   // markdown: {
   //   smartypants: true

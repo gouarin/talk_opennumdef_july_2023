@@ -1,1 +1,1 @@
-Slides: https://gouarin.github.io/diphasique_OPENNUMDEF_2023/
+Slides: https://gouarin.github.io/talk_opennumdef_july_2023/

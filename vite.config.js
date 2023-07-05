@@ -1,3 +1,3 @@
 export default {
-    base: '/diphasique_OPENNUMDEF_2023/'
+    base: '/talk_opennumdef_july_2023/'
 }
